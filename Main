@@ -1,0 +1,31 @@
+import java.awt.*;
+
+public class Main {
+    public static void main(String[] args) {
+        // buat object CPU
+        CPU myKomputer = new CPU(15000000, "Lenovo");
+
+        CPU.Processor i7 = myKomputer.new Processor(8, "Intel", "i7");
+
+        CPU.RAM rs32GB = myKomputer.new RAM(32, "Samsung");
+
+        CPU.Harddisk SSD = myKomputer.new Harddisk(" Solid State Drive(SSD");
+
+        CPU.Motherboard ATX = myKomputer.new Motherboard("Advance Technology eXtended");
+
+        CPU.PowerSupply SFX = myKomputer.new PowerSupply("SFX Power Supply");
+
+        CPU.VGAcard Integrated = myKomputer.new VGAcard("Integrated Graphics");
+
+
+        myKomputer.getCPUInfo();
+        i7.getProcessorInfo();
+        rs32GB.getInfoRAM();
+        SSD.getInfoHardisk();
+        ATX.getInfoMotherboard();
+        SFX.getInfoPowerSupply();
+        Integrated.getInfoVGAcard();
+
+        // bikin object harddisk, vga, motherboard, powersupply
+    }
+}
