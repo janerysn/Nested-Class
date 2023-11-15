@@ -1,0 +1,110 @@
+/*
+  Name : Zahra Jane Arnecia
+  NPM  : 4522210028
+  */
+
+import java.text.NumberFormat;
+import java.util.Locale;
+public class CPU {
+    private double harga;
+    private String merek;
+
+    public CPU(double harga, String merek) {
+        this.harga = harga;
+        this.merek = merek;
+    }
+    public class Processor {
+        int cores;
+        String manufacturer;
+        String name;
+
+        Processor(int cores, String manufacturer, String name) {
+            this.cores = cores;
+            this.manufacturer = manufacturer;
+            this.name = name;
+        }
+
+        public void getProcessorInfo() {
+            System.out.println("Jumlah core: " + this.cores);
+            System.out.println("Pabrik: " + this.manufacturer);
+            System.out.println("Processor: " + this.name);
+        }
+    }
+
+    public class RAM {
+        int jumlahRAM;
+        String manufacturer;
+
+        RAM(int jumlahRAM, String manufacturer) {
+            this.jumlahRAM = jumlahRAM;
+            this.manufacturer = manufacturer;
+        }
+
+
+        public void getInfoRAM() {
+            System.out.println("Jumlah RAM: " + this.jumlahRAM);
+            System.out.println("Pabrik: " + this.manufacturer);
+        }
+    }
+
+    public class Harddisk{
+        String Tipe;
+
+        Harddisk(String Tipe){
+            this.Tipe =Tipe;
+        }
+
+        public void getInfoHardisk(){
+            System.out.println("Tipe Hard disk :" + this.Tipe);
+        }
+    }
+
+    public class Motherboard{
+        String Tipe;
+
+        Motherboard(String Tipe){
+            this.Tipe=Tipe;
+        }
+        public void getInfoMotherboard(){
+            System.out.println("Tipe Motherboard nya adalah " + this.Tipe);
+        }
+    }
+
+    public class PowerSupply{
+        String Jenis;
+
+        PowerSupply(String Jenis){
+            this.Jenis=Jenis;
+        }
+        public void getInfoPowerSupply(){
+            System.out.println("PowerSupply yang digunakan adalah " + this.Jenis);
+        }
+    }
+
+    public class VGAcard{
+        String type;
+
+        VGAcard(String type){
+            this.type=type;
+        }
+        public void getInfoVGAcard(){
+            System.out.println("VGAcard type yang digunakan adalah " + this.type);
+        }
+    }
+
+    public void getCPUInfo() {
+        Locale localeID = new Locale("in", "ID");
+        NumberFormat formatRupiah = NumberFormat.getCurrencyInstance(localeID);
+
+        System.out.println("Komputer Merek: " + this.merek);
+
+        // menuliskan harga yang double ke dalam format rupiah
+        System.out.println("Harga: " + formatRupiah.format(this.harga));
+    }
+
+
+    // inner class Harddisk
+    // inner class Motherboard
+    // inner class PowerSuply
+    // inner class VGACard
+}
